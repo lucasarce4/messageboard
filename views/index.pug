@@ -1,0 +1,15 @@
+
+extends layout
+
+block content
+ header(class="header")
+  h1= title
+  a(class="button" href="./new") New message
+
+ main(class='main')
+  each val in messages
+   container(class="messageContainer")
+    header(class="messageHeader")
+     h2= val.user
+     p= val.added
+    p= val.text

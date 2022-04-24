@@ -1,8 +1,120 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-a {
-  color: #00B7FF;
+:root{
+  --bg-color:#91BDDB;
+  --light-color:#A8E6FF;
+  --dark-color:#2D4F75;
 }
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:var(--bg-color);
+}
+
+
+
+.header,
+.main{
+  width:100vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding:30px;
+}
+
+.header > h1{
+  font-size:3rem;
+  color:var(--dark-color);
+}
+
+.header > a{
+  text-decoration:none;
+  font-size:1.8rem;
+  margin:15px 0px;
+  color:var(--light-color);
+  text-shadow: 0 0 4px #000;
+  background:var(--dark-color);
+  padding:5px;
+  border-radius:10px;
+}
+
+.messageContainer{
+  margin:1.5% 0;
+  border:1px solid var(--dark-color);
+  padding:1rem;
+  border-radius:10px;
+  min-width:40%;
+  background-color:var(--light-color);
+  color:var(--dark-color);
+}
+
+.messageContainer > *{
+  padding:5px;
+}
+
+.messageHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.formContainer{
+  width:100vw;
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.formContainer > h1{
+  margin:-50px 0 50px 0; 
+  font-size:3rem;
+  color:var(--dark-color)
+}
+
+.homeButton{
+  font-size:1.5rem;
+  margin:30px;
+  text-decoration:none;
+  color:var(--dark-color);
+  cursor:pointer;
+}
+
+.homeButton:hover{
+  text-decoration:underline;
+}
+
+.form{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.form > * {
+  margin:4px 0;
+  border:1px solid var(--dark-color);
+  border-radius:5px;
+}
+
+.form > input[type="text"],
+.form > textarea{
+  width:350px;
+  padding:5px;
+  font-size:1.5rem;
+}
+
+.form > input[type="submit"]{
+  width:fit-content;
+  padding:10px 30px;
+  border:none;
+  background:var(--dark-color);
+  color:var(--light-color);
+  font-size:1.3rem;
+  cursor:pointer;
+}
+
